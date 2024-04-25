@@ -19,8 +19,8 @@ const Header = () => {
                         <img src={logo} alt="logo" />
                     </div>
                     <div className="lg:w-[85%]">
-                        <ul className={`lg:flex justify-center absolute lg:static -z-10 
-                        ${show == true ? 'top-[70px] left-0 bg-[rgb(245,245,243,50%)] w-full text-center ease-in duration-700' :
+                        <ul className={`lg:flex justify-center absolute lg:static z-50 
+                        ${show == true ? 'top-[70px] left-0 bg-[rgba(245,245,243,0.95)] w-full text-center ease-in duration-700' :
                                 ' top-0 left-[-300px]'}`}>
                             <li className='font-dm text-[#767676] text-[16px] font-normal lg:px-5 py-2 lg:py-0 hover:text-[#262626] hover:font-bold'>Home</li>
                             <li className='font-dm text-[#767676] text-[16px] font-normal lg:px-5 py-2 lg:py-0 hover:text-[#262626] hover:font-bold'>Shop</li>
@@ -28,6 +28,10 @@ const Header = () => {
                             <li className='font-dm text-[#767676] text-[16px] font-normal lg:px-5 py-2 lg:py-0 hover:text-[#262626] hover:font-bold'>Contacts</li>
                             <li className='font-dm text-[#767676] text-[16px] font-normal lg:px-5 py-2 lg:py-0 hover:text-[#262626] hover:font-bold'>Journal</li>
                         </ul>
+                    </div>
+                    <div className="">
+                        <a href="#" className="pr-4">EN</a>
+                        <a href="#">RU</a>
                     </div>
                     <div className="lg:hidden " onClick={handelshow}>
                         {show ? <RxCross2 /> : <FaBars />}

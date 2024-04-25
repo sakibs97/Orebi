@@ -2,91 +2,151 @@ import Container from "./Container"
 import Flex from "./Flex"
 import { FaBarsStaggered } from "react-icons/fa6";
 import { FaUser, FaShoppingCart, FaSearch } from "react-icons/fa";
-import { MdArrowDropDown } from "react-icons/md";
+import { MdArrowDropDown, MdArrowDropUp } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
 import color from "../assets/color.png"
+import { RxCross2 } from "react-icons/rx";
+import { RiArrowDropRightLine } from "react-icons/ri";
 
 const Menu = () => {
     let [cateshow, setCateShow] = useState(false)
     let [cartshow, setCartShow] = useState(false)
+    let [usershow, setUserShow] = useState(false)
+
     let cateMenu = useRef()
     let cartMenu = useRef()
+    let userMenu = useRef()
+
     useEffect(() => {
         document.addEventListener("click", (e) => {
             if (cateMenu.current.contains(e.target) == true) {
-                setCateShow(true)
+                setCateShow(!cateshow)
             } else {
                 setCateShow(false)
             }
-        })
-    }, [cateshow])
-    useEffect(() => {
-        document.addEventListener("click", (e) => {
             if (cartMenu.current.contains(e.target) == true) {
-                setCartShow(true)
+                setCartShow(!cartshow)
             } else {
                 setCartShow(false)
             }
+            if (userMenu.current.contains(e.target) == true) {
+                setUserShow(!usershow)
+            } else {
+                setUserShow(false)
+            }
         })
-    }, [cartshow])
+    }, [cateshow, cartshow, usershow])
+
+    let [show, setShow] = useState(false)
+    let handelshow = () => {
+        setShow(!show)
+    }
+
 
     return (
-        <Container>
-            <Flex className='items-center'>
-                <div className="w-[30%] relative" ref={cateMenu}>
-                    <div className=" flex items-center gap-x-3">
-                        <FaBarsStaggered />
-                        <h3 className="font-dm text-[#262626] text-[16px] font-normal">Shop by Category</h3>
+        <section className="bg-[#F5F5F3] py-5 px-2 lg:px-0">
+            <Container>
+                <Flex className='justify-between items-center'>
+                    <div className=" relative" ref={cateMenu}>
+                        <div className=" flex items-center gap-x-3">
+                            <FaBarsStaggered />
+                            <h3 className="font-dm text-[#262626] text-[16px] font-normal">Shop by Category</h3>
+                        </div>
+                        {cateshow &&
+                            <>
+                                <div className="absolute top-12 lg:top-7 left-0 bg-[#262626] w-48 lg:w-72 z-50">
+                                    <ul className="">
+                                        <a href="#"><li className="border-b-[1px] border-[#fff] py-2 font-dm text-[16px] text-[#fff] opacity-70 px-3 hover:opacity-100 hover:pl-6 duration-300 flex justify-between items-center">
+                                            Accesories<span><RiArrowDropRightLine /></span></li></a>
+                                        <a href="#"><li className="border-b-[1px] border-[#fff] py-2 font-dm text-[16px] text-[#fff] opacity-70 px-3 hover:opacity-100 hover:pl-6 duration-300 flex justify-between items-center">
+                                            Furniture<span><RiArrowDropRightLine /></span></li></a>
+                                        <a href="#"><li className="border-b-[1px] border-[#fff] py-2 font-dm text-[16px] text-[#fff] opacity-70 px-3 hover:opacity-100 hover:pl-6 duration-300 flex justify-between items-center">
+                                            Electronics<span><RiArrowDropRightLine /></span></li></a>
+                                        <a href="#"><li className="border-b-[1px] border-[#fff] py-2 font-dm text-[16px] text-[#fff] opacity-70 px-3 hover:opacity-100 hover:pl-6 duration-300 flex justify-between items-center">
+                                            Clothes<span><RiArrowDropRightLine /></span></li></a>
+                                        <a href="#"><li className="border-b-[1px] border-[#fff] py-2 font-dm text-[16px] text-[#fff] opacity-70 px-3 hover:opacity-100 hover:pl-6 duration-300 flex justify-between items-center">
+                                            Bags<span><RiArrowDropRightLine /></span></li></a>
+                                        <a href="#"><li className="py-2 font-dm text-[16px] text-[#fff] opacity-70 px-3 hover:opacity-100 hover:pl-6 duration-300 flex justify-between items-center">
+                                            Home appliances<span><RiArrowDropRightLine /></span></li></a>
+                                    </ul>
+                                </div>
+                                {/* <div className="">
+                                <h3>Phones</h3>
+                                <ul>
+                                    <li>Phone 1</li>
+                                    <li>Phone 1</li>
+                                    <li>Phone 1</li>
+                                    <li>Phone 1</li>
+                                    <li>Phone 1</li>
+                                    <li>Phone 1</li>
+                                    <li>Phone 1</li>
+                                </ul>
+                            </div> */}
+
+                            </>
+                        }
+
                     </div>
-                    {cateshow &&
-                        <div className="absolute top-7 left-0 bg-[#262626] w-72">
-                            <ul className="py-3">
-                                <li className="py-2 font-dm text-[16px] text-[#fff] opacity-70 pl-3 hover:opacity-100 hover:pl-6 duration-300">Accesories</li>
-                                <li className="py-2 font-dm text-[16px] text-[#fff] opacity-70 pl-3 hover:opacity-100 hover:pl-6 duration-300">Furniture</li>
-                                <li className="py-2 font-dm text-[16px] text-[#fff] opacity-70 pl-3 hover:opacity-100 hover:pl-6 duration-300">Electronics</li>
-                                <li className="py-2 font-dm text-[16px] text-[#fff] opacity-70 pl-3 hover:opacity-100 hover:pl-6 duration-300">Clothes</li>
-                                <li className="py-2 font-dm text-[16px] text-[#fff] opacity-70 pl-3 hover:opacity-100 hover:pl-6 duration-300">Bags</li>
-                                <li className="py-2 font-dm text-[16px] text-[#fff] opacity-70 pl-3 hover:opacity-100 hover:pl-6 duration-300">Home appliances</li>
-                            </ul>
-                        </div>
-                    }
-                </div>
-                <div className="w-2/5">
-                    <div className="relative">
-                        <input type="search" className='border-2 border-[#2222] p-2 w-full' placeholder="Search Products" />
-                        <div className="absolute top-[50%] translate-y-[-50%] right-[10px]">
-                            <FaSearch />
+                    <div className="">
+                        <div className="relative">
+                            <input type="search" className='border-2 border-[#2222] p-2 lg:w-[500px]' placeholder="Search Products" />
+                            <div className="absolute top-[50%] translate-y-[-50%] right-[10px]">
+                                <FaSearch />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="w-[30%] relative">
-                    <div className="flex justify-end gap-x-3">
-                        <div className="flex">
-                            <FaUser />
-                            <MdArrowDropDown />
-                        </div>
-                        <div className="" ref={cartMenu} >
-                            <FaShoppingCart />
+                    <div className=" relative">
+                        <div className="flex justify-end gap-x-3">
+                            <div className="flex" ref={userMenu} onClick={handelshow}>
+                                <a href="#" className="flex">
+                                    <FaUser />
+                                    {show ? <MdArrowDropDown /> : <MdArrowDropUp />}
+                                </a>
+                            </div>
+                            <div className="" ref={cartMenu} >
+                                <a href="#"><FaShoppingCart /></a>
+                            </div>
                             {cartshow &&
-                                <div className="absolute top-7 right-0">
+                                <div className="absolute top-7 right-0 border-[2px] border-[#F0F0F0] w-[360px]">
                                     <div className="flex items-center bg-[#F5F5F3] p-4">
-                                        <img src={color} alt="" />
-                                        <div className="pl-[10px]">
-                                            <p className="py-3">Black Smart Watch</p>
-                                            <h6>$44.00</h6>
+                                        <img src={color} alt="color" />
+                                        <div className="pl-[10px] flex items-center">
+                                            <div className="font-dm text-[#262626] text-[14px] font-bold">
+                                                <p className="">Black Smart Watch</p>
+                                                <h6>$44.00</h6>
+                                            </div>
+                                            <div className="pl-16">
+                                                <a href="#"><RxCross2 /></a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <h6 className="py-3">Subtotal: $44.00</h6>
-                                    <button className="border-2 border-[#2B2B2B] py-4 px-10 hover:bg-[#2B2B2B] hover:text-[#FFF]" >View Cart</button>
-                                    <button className="border-2 border-[#2B2B2B] py-4 px-10 hover:bg-[#2B2B2B] hover:text-[#FFF]"> Checkout</button>
+                                    <div className="px-4 pb-4 bg-[rgba(197,186,186,0.07)]">
+                                        <h6 className="py-3 font-dm text-[16px] font-bold text-[#262626]">
+                                            <span className="font-normal text-[#767676] pr-2">Subtotal :</span>
+                                            $44.00</h6>
+                                        <div className="font-dm text-[14px] font-bold">
+                                            <button className="border-[1px] border-[#2B2B2B] py-[15px] px-10 mr-5 hover:bg-[#2B2B2B] hover:text-[#FFF]" >View Cart</button>
+                                            <button className="border-[1px] border-[#2B2B2B] py-[15px] px-10 hover:bg-[#2B2B2B] hover:text-[#FFF]"> Checkout</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            {usershow &&
+                                <div className="text-center absolute top-7 right-[30px] border-[1px] w-[200px]">
+                                    <div className="border-b-[1px] py-4 hover:bg-[#2B2B2B] hover:text-[#FFF]">
+                                        <a href="#">My Account</a>
+                                    </div>
+                                    <div className="py-4 hover:bg-[#2B2B2B] hover:text-[#FFF]">
+                                        <a href="#">Log Out</a>
+                                    </div>
                                 </div>
                             }
                         </div>
                     </div>
-                </div>
-            </Flex>
-        </Container>
+                </Flex>
+            </Container>
+        </section>
     )
 }
 
