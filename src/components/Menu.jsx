@@ -47,7 +47,7 @@ const Menu = () => {
     return (
         <section className="bg-[#F5F5F3] py-5 px-2 lg:px-0">
             <Container>
-                <Flex className='justify-between items-center'>
+                <div className="lg:flex lg:justify-between items-center">
                     <div className=" relative" ref={cateMenu}>
                         <div className=" flex items-center gap-x-3">
                             <FaBarsStaggered />
@@ -88,16 +88,16 @@ const Menu = () => {
                         }
 
                     </div>
-                    <div className="">
+                    <div className="lg:mr-20 my-4 lg:my-0">
                         <div className="relative">
-                            <input type="search" className='border-2 border-[#2222] p-2 lg:w-[500px]' placeholder="Search Products" />
+                            <input type="search" className='border-2 border-[#2222] p-2 lg:w-[500px] w-full' placeholder="Search Products" />
                             <div className="absolute top-[50%] translate-y-[-50%] right-[10px]">
                                 <FaSearch />
                             </div>
                         </div>
                     </div>
                     <div className=" relative">
-                        <div className="flex justify-end gap-x-3">
+                        <div className="flex lg:justify-end gap-x-3">
                             <div className="flex" ref={userMenu} onClick={handelshow}>
                                 <a href="#" className="flex">
                                     <FaUser />
@@ -108,7 +108,7 @@ const Menu = () => {
                                 <a href="#"><FaShoppingCart /></a>
                             </div>
                             {cartshow &&
-                                <div className="absolute top-7 right-0 border-[2px] border-[#F0F0F0] w-[360px]">
+                                <div className="absolute top-7 right-0 border-[2px] border-[#F0F0F0] w-[360px] z-50">
                                     <div className="flex items-center bg-[#F5F5F3] p-4">
                                         <img src={color} alt="color" />
                                         <div className="pl-[10px] flex items-center">
@@ -121,7 +121,7 @@ const Menu = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="px-4 pb-4 bg-[rgba(197,186,186,0.07)]">
+                                    <div className="px-4 pb-4 bg-[rgba(192,189,189,0.87)]">
                                         <h6 className="py-3 font-dm text-[16px] font-bold text-[#262626]">
                                             <span className="font-normal text-[#767676] pr-2">Subtotal :</span>
                                             $44.00</h6>
@@ -133,7 +133,7 @@ const Menu = () => {
                                 </div>
                             }
                             {usershow &&
-                                <div className="text-center absolute top-7 right-[30px] border-[1px] w-[200px]">
+                                <div className="bg-[#cecccc] text-center absolute top-7 right-[30px] border-[1px] w-[200px] z-50">
                                     <div className="border-b-[1px] py-4 hover:bg-[#2B2B2B] hover:text-[#FFF]">
                                         <a href="#">My Account</a>
                                     </div>
@@ -144,6 +144,9 @@ const Menu = () => {
                             }
                         </div>
                     </div>
+                </div>
+                <Flex className='justify-between items-center'>
+
                 </Flex>
             </Container>
         </section>

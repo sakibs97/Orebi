@@ -20,14 +20,14 @@ const AdsOne = () => {
 
     return (
         <Container>
-            <Flex className='justify-between py-[50px]'>
-                <div className='w-[49%] relative after:absolute after:top-0 after:left-0 after:content-[""] after:bg-[rgba(0,0,0,0.45)] after:w-full after:h-full'>
+            <div className="lg:flex lg:justify-between py-[30px] lg:py-[50px]">
+                <div className='lg:w-[49%] mb-[30px] lg:mb-0 relative after:absolute after:top-0 after:left-0 after:content-[""] after:bg-[rgba(0,0,0,0.45)] after:w-full after:h-full'>
                     <img src={adspone} alt="" className="w-full" />
                     <div className="absolute bottom-[10%] left-[15%]">
                         <AdsOnereusable heads="Phones Sale" adspone="Up to" adsoffer="30%" adstwo="sale for all phones!" shopbtn="Shop Now" />
                     </div>
                 </div>
-                <div className="w-[49%]">
+                <div className="lg:w-[49%]">
                     <div className="pb-[33px]">
                         <Slider {...settings}>
                             <div className="relative">
@@ -51,6 +51,8 @@ const AdsOne = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <Flex className=''>
             </Flex>
         </Container >
     )

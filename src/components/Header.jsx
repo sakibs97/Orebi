@@ -15,10 +15,10 @@ const Header = () => {
         <>
             <Container>
                 <Flex className="items-center justify-between py-7 px-2 lg:px-0">
-                    <div className="lg:w-[15%]">
+                    <div className="">
                         <img src={logo} alt="logo" />
                     </div>
-                    <div className="lg:w-[85%]">
+                    <div className="">
                         <ul className={`lg:flex justify-center absolute lg:static z-50 
                         ${show == true ? 'top-[70px] left-0 bg-[rgba(245,245,243,0.95)] w-full text-center ease-in duration-700' :
                                 ' top-0 left-[-300px]'}`}>

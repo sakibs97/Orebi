@@ -7,8 +7,7 @@ const Footer = () => {
     return (
         <Container>
             <Flex className=''>
-                Comming soon....
-                {/* <div className="flex">
+                <div className="flex">
                     <div className="">
                         <h3>MENU</h3>
                         <ul>
@@ -49,7 +48,7 @@ const Footer = () => {
                     <div className="">
                         <img src={logo} alt="" />
                     </div>
-                </div> */}
+                </div>
             </Flex>
         </Container>
     )
