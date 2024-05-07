@@ -7,8 +7,7 @@ import Container from "./Container"
 import NewCollectreusable from "./reusable/NewCollectreusable"
 import NamePricereusable from "./reusable/NamePricereusable"
 import Slider from "react-slick";
-// import Activereusable from "./reusable/Activereusable"
-
+import Activereusable from "./reusable/Activereusable"
 
 
 const NewArrivals = () => {
@@ -57,27 +56,47 @@ const NewArrivals = () => {
                 <div className="pb-[30px]">
                     <h2 className="font-dm font-bold text-[30px] lg:text-[40px] text-[#262626]">New Arrivals</h2>
                 </div>
+
                 <Slider {...settings}>
-                    <div className="relative pr-[20px] lg:pr-[40px] group/item">
-                        <img src={crew1} alt="Crew1" className=" hover:shadow-lg shadow-[#D8D8D8]-500/50" />
-                        <NewCollectreusable newcoll='10%' />
-                        {/* <Activereusable WishList='Add to Wish List' Compare='Compare' cart='Add to Cart ' /> */}
-                        <NamePricereusable proname='Basic Crew  Neck Tee' pric='$44.00' black='Black' />
+                    <div className="w-[24%]">
+                        <div className="relative overflow-hidden group mx-[15px]">
+                            <img src={crew1} alt="crew1" className="w-full group-hover:shadow-lg shadow-[#D8D8D8]-500/50" />
+                            <NewCollectreusable newcoll='10%' />
+                            <Activereusable WishList='Add to Wish List' Compare='Compare' cart='Add to Cart ' />
+                        </div>
+                        <div className="mx-[15px]">
+                            <NamePricereusable proname='Basic Crew  Neck Tee' pric='$44.00' black='Black' />
+                        </div>
                     </div>
-                    <div className="relative pr-[20px] lg:pr-[40px]">
-                        <img src={crew2} alt="Crew2" className="hover:shadow-lg shadow-[#D8D8D8]-500/50" />
-                        <NewCollectreusable newcoll='New' />
-                        <NamePricereusable proname='Basic Crew  Neck Tee' pric='$44.00' black='Black' />
+                    <div className="w-[24%]">
+                        <div className="relative overflow-hidden group mx-[15px]">
+                            <img src={crew2} alt="crew2" className='w-full' />
+                            <NewCollectreusable newcoll='10%' />
+                            <Activereusable WishList='Add to Wish List' Compare='Compare' cart='Add to Cart ' />
+                        </div>
+                        <div className="mx-[15px]">
+                            <NamePricereusable proname='Basic Crew  Neck Tee' pric='$44.00' black='Black' />
+                        </div>
                     </div>
-                    <div className="relative pr-[20px] lg:pr-[40px]">
-                        <img src={crew3} alt="Crew3" className="hover:shadow-lg shadow-[#D8D8D8]-500/50" />
-                        <NewCollectreusable newcoll='New' />
-                        <NamePricereusable proname='Basic Crew  Neck Tee' pric='$44.00' black='Black' />
+                    <div className="w-[24%]">
+                        <div className="relative overflow-hidden group mx-[15px]">
+                            <img src={crew3} alt="crew3" className='w-full' />
+                            <NewCollectreusable newcoll='10%' />
+                            <Activereusable WishList='Add to Wish List' Compare='Compare' cart='Add to Cart ' />
+                        </div>
+                        <div className="mx-[15px]">
+                            <NamePricereusable proname='Basic Crew  Neck Tee' pric='$44.00' black='Black' />
+                        </div>
                     </div>
-                    <div className="relative pr-[20px] lg:pr-[40px]">
-                        <img src={crew4} alt="Crew4" className="hover:shadow-lg shadow-[#D8D8D8]-500/50" />
-                        <NewCollectreusable newcoll='New' />
-                        <NamePricereusable proname='Basic Crew  Neck Tee' pric='$44.00' black='Black' />
+                    <div className="w-[24%]">
+                        <div className="relative overflow-hidden group mx-[15px]">
+                            <img src={crew4} alt="crew4" className='w-full' />
+                            <NewCollectreusable newcoll='10%' />
+                            <Activereusable WishList='Add to Wish List' Compare='Compare' cart='Add to Cart ' />
+                        </div>
+                        <div className="mx-[15px]">
+                            <NamePricereusable proname='Basic Crew  Neck Tee' pric='$44.00' black='Black' />
+                        </div>
                     </div>
                 </Slider>
             </Container>

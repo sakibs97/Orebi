@@ -3,16 +3,21 @@ import { TfiReload } from "react-icons/tfi";
 
 const Activereusable = ({ WishList, Compare, cart }) => {
     return (
-        <div className="absolute invisible group-hover/item:visible bottom-[18%] right-[40px] w-[90%]">
-            <div className="relative bg-[#f5f5f593] h-[150px]">
-                <div className="absolute bottom-[90px] right-[30px]">
-                    <p className="flex items-center">{WishList}<FaHeart className="ml-[10px]" /></p>
+        <div className="bg-[#F5F5F5] h-[150px] absolute bottom-[-150px] left-0 w-full opacity-0
+                        flex justify-end items-center group-hover:bottom-0
+                        group-hover:h-[150px] group-hover:opacity-100 duration-500 ease-in-out">
+            <div className="">
+                <div className="flex items-center justify-end gap-x-3 py-2 mr-2">
+                    <p className="font-dm font-normal text-[16px] text-[#767676] hover:font-bold hover:text-[#262626] duration-300 ease-in-out">{WishList}</p>
+                    <FaHeart />
                 </div>
-                <div className="absolute bottom-[55px] right-[30px]">
-                    <p className="flex items-center">{Compare}<TfiReload className="ml-[10px]" /></p>
+                <div className="flex items-center justify-end gap-x-3 py-2 mr-2">
+                    <p className="font-dm font-normal text-[16px] text-[#767676] hover:font-bold hover:text-[#262626] duration-300 ease-in-out">{Compare}</p>
+                    <FaCartPlus />
                 </div>
-                <div className="absolute bottom-[25px] right-[30px]">
-                    <a href="#" className="flex items-center">{cart}<FaCartPlus className="ml-[10px]" /></a>
+                <div className="flex items-center justify-end gap-x-3 py-2 mr-2">
+                    <p className="font-dm font-normal text-[16px] text-[#767676] hover:font-bold hover:text-[#262626] duration-300 ease-in-out">{cart}</p>
+                    <TfiReload />
                 </div>
             </div>
         </div>
