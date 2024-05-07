@@ -8,7 +8,25 @@ import NewCollectreusable from "./reusable/NewCollectreusable"
 import NamePricereusable from "./reusable/NamePricereusable"
 import Slider from "react-slick";
 import Activereusable from "./reusable/Activereusable"
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
+function SampleNextArrow(props) {
+    const { onClick } = props;
+    return (
+        <div
+            className='absolute bottom-[50%] left-0 translate-y-[-50%] p-[10px] bg-[#979797] rounded-full' onClick={onClick}
+        ><FaArrowLeft /></div>
+    );
+}
+
+function SamplePrevArrow(props) {
+    const { onClick } = props;
+    return (
+        <div className='absolute bottom-[50%] right-0 translate-y-[-50%] p-[10px] bg-[#979797] rounded-full z-50' onClick={onClick}>
+            <FaArrowRight />
+        </div>
+    );
+}
 
 const NewArrivals = () => {
     const settings = {
@@ -20,6 +38,8 @@ const NewArrivals = () => {
         focusOnSelect: true,
         autoplay: true,
         autoplaySpeed: 2000,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />,
         responsive: [
             {
                 breakpoint: 1024,

@@ -72,18 +72,18 @@ const Banner = () => {
                 </div>
             </Slider>
             <Container>
-                <Flex className='items-center justify-between py-[10px]'>
+                <Flex className='items-center justify-between py-[10px] px-[10px] lg:px-0'>
                     <div className="flex items-center">
                         <span className="font-dm font-bold text-[#262626] text-[25px]">2</span>
-                        <h6 className="font-dm font-normal text-[16px] pl-[10px] text-[#6D6D6D]">Two years warranty</h6>
+                        <h6 className="font-dm font-normal text-[12px] lg:text-[16px] pl-[10px] text-[#6D6D6D]">Two years warranty</h6>
                     </div>
                     <div className="flex items-center">
                         <FaTruck className="h-[25px] w-[30px]" />
-                        <h6 className="font-dm font-normal text-[16px] pl-[10px] text-[#6D6D6D]">Free shipping</h6>
+                        <h6 className="font-dm font-normal text-[12px] lg:text-[16px] pl-[10px] text-[#6D6D6D]">Free shipping</h6>
                     </div>
                     <div className="flex items-center">
                         <SlReload className="h-[25px] w-[30px]" />
-                        <h6 className="font-dm font-normal text-[16px] pl-[10px] text-[#6D6D6D]">Return policy in 30 days</h6>
+                        <h6 className="font-dm font-normal text-[12px] lg:text-[16px] pl-[10px] text-[#6D6D6D]">Return policy in 30 days</h6>
                     </div>
                 </Flex>
             </Container>
