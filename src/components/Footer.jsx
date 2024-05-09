@@ -7,9 +7,9 @@ const Footer = () => {
     return (
         <section className='mx-[10px] lg:mx-0'>
             <Container>
-                <div className="lg:flex lg:justify-between">
-                    <div className="lg:w-[65%] lg:flex lg:justify-between">
-                        <div className="lg:w-[50%] flex justify-between">
+                <div className="lg:flex md:flex md:justify-between lg:justify-between">
+                    <div className="lg:w-[65%] md:w-full lg:flex md:flex md:justify-between lg:justify-between">
+                        <div className="lg:w-[50%] md:w-[50%] flex justify-between">
                             <div className="">
                                 <h3 className="font-dm font-bold text-[16px] text-[#262626] pb-[10px]">MENU</h3>
                                 <ul>
@@ -41,18 +41,18 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="">
+                        <div className="sm:text-center lg:text-start md:text-start">
                             <h4 className="font-dm font-bold text-[16px] text-[#262626]">(052) 611-5711</h4>
                             <h4 className="font-dm font-bold text-[16px] text-[#262626] pb-[10px]">company@domain.com</h4>
                             <a href="#" className="font-dm font-normal text-[14px] text-[#6D6D6D] hover:text-[#262626] duration-300 ease-in-out py-[3px]">575 Crescent Ave. Quakertown, PA 18951</a>
                         </div>
                     </div>
-                    <div className="w-[25%]">
+                    <div className="lg:w-[25%] md:w-[15%]">
                         <img src={logo} alt="logo" />
                     </div>
                 </div>
-                <div className="flex justify-between my-[30px]">
-                    <div className="flex gap-x-2">
+                <div className="lg:flex lg:justify-between my-[30px] sm:text-center">
+                    <div className="flex gap-x-2 sm:place-content-center">
                         <FaFacebookF />
                         <FaLinkedinIn />
                         <FaInstagram />
