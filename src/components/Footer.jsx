@@ -47,17 +47,17 @@ const Footer = () => {
                             <a href="#" className="font-dm font-normal text-[14px] text-[#6D6D6D] hover:text-[#262626] duration-300 ease-in-out py-[3px]">575 Crescent Ave. Quakertown, PA 18951</a>
                         </div>
                     </div>
-                    <div className="lg:w-[25%] md:w-[15%]">
+                    <div className="lg:w-[25%] md:w-[15%] mt-[20px]">
                         <img src={logo} alt="logo" />
                     </div>
                 </div>
-                <div className="lg:flex lg:justify-between my-[30px] sm:text-center">
+                <div className="flex justify-between items-center  my-[30px] sm:text-center">
                     <div className="flex gap-x-2 sm:place-content-center">
                         <FaFacebookF />
                         <FaLinkedinIn />
                         <FaInstagram />
                     </div>
-                    <div className="">
+                    <div className="px-[30px] lg:px-0">
                         <p className="font-dm font-normal text-[14px] text-[#6D6D6D]">2020 Orebi Minimal eCommerce Figma Template by Adveits</p>
                     </div>
                 </div>
