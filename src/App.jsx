@@ -5,6 +5,7 @@ import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Menu from "./components/Menu"
 import NewArrivals from "./components/NewArrivals"
+import OurBestApi from "./components/OurBestApi"
 import OurBestsellers from "./components/OurBestsellers"
 import SpecialOffer from "./components/SpecialOffer"
 
@@ -20,6 +21,7 @@ function App() {
       <AdsOne />
       <NewArrivals />
       <OurBestsellers />
+      <OurBestApi />
       <SpecialOffer />
       <Footer />
     </>
