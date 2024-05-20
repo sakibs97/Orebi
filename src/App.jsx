@@ -1,29 +1,21 @@
+import RootLayout from "./components/layout/RootLayout"
+import Home from "./pages/Home"
+import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from "react-router-dom"
+import Products from "./pages/Products"
 
-import AdsOne from "./components/AdsOne"
-import Banner from "./components/Banner"
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-import Menu from "./components/Menu"
-import NewArrivals from "./components/NewArrivals"
-import OurBestApi from "./components/OurBestApi"
-import OurBestsellers from "./components/OurBestsellers"
-import SpecialOffer from "./components/SpecialOffer"
-
+let router = createBrowserRouter(createRoutesFromElements(
+  <Route element={<RootLayout />}>
+    <Route index element={<Home />}></Route>
+    <Route path="/products" element={<Products />}></Route>
+  </Route>
+))
 
 function App() {
 
 
   return (
     <>
-      <Header />
-      <Menu />
-      <Banner />
-      <AdsOne />
-      <NewArrivals />
-      <OurBestsellers />
-      <OurBestApi />
-      <SpecialOffer />
-      <Footer />
+      <RouterProvider router={router}></RouterProvider>
     </>
   )
 }
