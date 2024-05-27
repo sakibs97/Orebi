@@ -1,22 +1,14 @@
-import axios from 'axios';
-import { useState } from 'react';
+
+import { useContext } from 'react';
 import Container from "./Container"
 import NewCollectreusable from "./reusable/NewCollectreusable"
 import Activereusable from "./reusable/Activereusable"
+import { ApiData } from './ContextApi';
 
 const OurBestApi = () => {
-    let [products, setProducts] = useState([])
+    let Data = useContext(ApiData)
 
-    let getData = () => {
-        axios.get("https://dummyjson.com/products").then((response) => {
-            setProducts(response.data.products);
-        })
-    }
-    useState(() => {
-        getData()
-    }, [])
 
-    console.log(products);
     return (
         <section className="pb-[30px] lg:pb-[50px]">
             <Container>
@@ -24,9 +16,9 @@ const OurBestApi = () => {
                     <h2 className="font-dm font-bold text-[30px] lg:text-[40px] text-[#262626]">Our Bestsellers</h2>
                 </div>
                 <div className="flex justify-between flex-wrap px-[10px] lg:px-0">
-                    {products.map((item) => (
+                    {Data.map((item, i) => (
                         <>
-                            <div className="lg:w-[24%] w-[48%] mb-[10px] lg:mb-0">
+                            <div key={i} className="lg:w-[24%] w-[48%] mb-[10px] lg:mb-0">
                                 <div className="relative overflow-hidden group">
                                     <img src={item.thumbnail} alt="best1" className="w-full lg:h-[250px] h-[150px] hover:shadow-lg shadow-[#D8D8D8]-500/50" />
                                     <NewCollectreusable newcoll='10%' />
