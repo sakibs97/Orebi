@@ -9,7 +9,7 @@ const ProductDetails = () => {
 
     let dataId = () => {
         axios.get(`https://dummyjson.com/products/${productId.id}`).then((response) => {
-            setSingleProduct(response.data.products)
+            setSingleProduct(response.data)
         })
     }
 
@@ -20,7 +20,7 @@ const ProductDetails = () => {
 
     return (
         <div>
-            helo
+            {singleProduct.title}
         </div>
     )
 }

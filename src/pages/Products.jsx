@@ -16,12 +16,12 @@ import PaginationArea from "../components/pagination/PaginationArea";
 const Products = () => {
     let data = useContext(ApiData)
     let [pageStart, setPageStart] = useState(1)
-    let [perPage, setPerPage] = useState(6)
+    let [perPage, setPerPage] = useState(8)
 
-    let lastPage = pageStart * perPage
-    let firstPage = lastPage - perPage
+    let firstPage = pageStart * perPage
+    let lastPage = firstPage - perPage
 
-    let allPage = data.slice(firstPage, lastPage)
+    let allPage = data.slice(lastPage, firstPage)
 
     let pageNumber = []
 
