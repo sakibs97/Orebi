@@ -23,6 +23,11 @@ const Products = () => {
 
     let allPage = data.slice(firstPage, lastPage)
 
+    let pageNumber = []
+
+    for (let i = 1; i < Math.ceil(data.length / perPage); i++) {
+        pageNumber.push(i)
+    }
 
     return (
         <>
@@ -104,7 +109,7 @@ const Products = () => {
                         </div>
                         <Post allPage={allPage} />
                         <div className="">
-                            <PaginationArea />
+                            <PaginationArea pageNumber={pageNumber} />
                         </div>
 
                     </div>
