@@ -16,17 +16,33 @@ import PaginationArea from "../components/pagination/PaginationArea";
 const Products = () => {
     let data = useContext(ApiData)
     let [pageStart, setPageStart] = useState(1)
-    let [perPage, setPerPage] = useState(8)
+    let [perPage, setPerPage] = useState(6)
 
-    let firstPage = pageStart * perPage
-    let lastPage = firstPage - perPage
+    let lastPage = pageStart * perPage
+    let firstPage = lastPage - perPage
 
-    let allPage = data.slice(lastPage, firstPage)
+    let allPage = data.slice(firstPage, lastPage)
 
     let pageNumber = []
 
-    for (let i = 1; i < Math.ceil(data.length / perPage); i++) {
+    for (let i = 0; i < Math.ceil(data.length / perPage); i++) {
         pageNumber.push(i)
+    }
+
+    let paginate = (pageNumber) => {
+        setPageStart(pageNumber + 1)
+    }
+
+    let next = () => {
+        if (pageStart < pageNumber.length) {
+            setPageStart((state) => state + 1)
+        }
+    }
+
+    let prev = () => {
+        if (pageStart > 1) {
+            setPageStart((state) => state - 1)
+        }
     }
 
     return (
@@ -109,7 +125,7 @@ const Products = () => {
                         </div>
                         <Post allPage={allPage} />
                         <div className="">
-                            <PaginationArea pageNumber={pageNumber} />
+                            <PaginationArea pageNumber={pageNumber} paginate={paginate} pageStart={pageStart} next={next} prev={prev} />
                         </div>
 
                     </div>
