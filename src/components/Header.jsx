@@ -25,14 +25,14 @@ const Header = () => {
                                 ' top-0 left-[-300px]'}`}>
                             <li className='font-dm text-[#767676] text-[16px] font-normal lg:px-5 py-2 lg:py-0 hover:text-[#262626] hover:font-bold'><Link to="/">Home</Link></li>
                             <li className='font-dm text-[#767676] text-[16px] font-normal lg:px-5 py-2 lg:py-0 hover:text-[#262626] hover:font-bold'><Link to="/products">Shop</Link></li>
-                            <li className='font-dm text-[#767676] text-[16px] font-normal lg:px-5 py-2 lg:py-0 hover:text-[#262626] hover:font-bold'>About</li>
-                            <li className='font-dm text-[#767676] text-[16px] font-normal lg:px-5 py-2 lg:py-0 hover:text-[#262626] hover:font-bold'>Contacts</li>
+                            <li className='font-dm text-[#767676] text-[16px] font-normal lg:px-5 py-2 lg:py-0 hover:text-[#262626] hover:font-bold'><Link to="/about">About</Link></li>
+                            <li className='font-dm text-[#767676] text-[16px] font-normal lg:px-5 py-2 lg:py-0 hover:text-[#262626] hover:font-bold'><Link to="/contact">Contacts</Link></li>
                             <li className='font-dm text-[#767676] text-[16px] font-normal lg:px-5 py-2 lg:py-0 hover:text-[#262626] hover:font-bold'>Journal</li>
                         </ul>
                     </div>
                     <div className="">
-                        <a href="#" className="pr-4">EN</a>
-                        <a href="#">RU</a>
+                        <a className="pr-4"><Link to='/login'>Login</Link></a>
+                        <a></a>
                     </div>
                     <div className="lg:hidden " onClick={handelshow}>
                         {show ? <RxCross2 /> : <FaBars />}

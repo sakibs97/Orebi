@@ -8,6 +8,7 @@ import { MdOutlineArrowDropDown } from "react-icons/md";
 import Description from "../components/Description"
 
 
+
 const ProductDetails = () => {
     let [show, setshow] = useState(false)
     let [showt, settshow] = useState(false)
@@ -58,12 +59,12 @@ const ProductDetails = () => {
                         </div>
                         <p className="font-dm font-normal text-[14px] text-[#767676] pl-5">1 Review</p>
                     </div>
-                    <div className="flex items-center border-b-[1px] border-b-[#D8D8D8] py-5">
+                    <div className="flex items-center border-b-[1px] border-b-[#F0F0F0] py-5">
                         <h4 className="font-dm font-bold lg:text-[16px] text-[#767676] line-through">$88.00</h4>
                         <h4 className="font-dm font-bold lg:text-[20px] text-[#262626] pl-5">$44.00</h4>
                     </div>
                 </div>
-                <div className="border-b-[1px] border-b-[#D8D8D8] pb-5 mt-5">
+                <div className="border-b-[1px] border-b-[#F0F0F0] pb-5 mt-5">
                     <div className="flex items-center justify-between w-[280px]">
                         <h4 className="font-dm font-bold text-[16px] text-[#262626] pr-6">COLOR:</h4>
                         <FaCircle className="mx-1 text-[#979797] w-[20px] h-[20px] hover:w-[28px] hover:h-[28px] ease-in-out duration-300" />
@@ -88,17 +89,17 @@ const ProductDetails = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex items-center border-b-[1px] border-b-[#D8D8D8] pb-5 mt-5">
+                <div className="flex items-center border-b-[1px] border-b-[#F0F0F0] pb-5 mt-5">
                     <h4 className="font-dm font-bold text-[16px] text-[#262626] mr-8">STATUS:</h4>
                     <p className="font-dm font-normal text-[16px] text-[#767676]">In stock</p>
                 </div>
-                <div className="py-5 border-b-[1px] border-b-[#D8D8D8]">
+                <div className="py-5 border-b-[1px] border-b-[#F0F0F0]">
                     <button className="py-[15px] px-[40px] border-[1px] border-[#262626] hover:bg-[#262626] font-dm font-bold text-[14px] ease-in-out duration-300 hover:text-[#fff] mr-5">Add to Wish List</button>
                     <button className="py-[15px] px-[40px] border-[1px] border-[#262626] hover:bg-[#262626] font-dm font-bold text-[14px] ease-in-out duration-300 hover:text-[#fff]">Add to Cart</button>
                 </div>
                 <div className="mb-5">
                     <div className="">
-                        <div onClick={() => setshow(!show)} className="flex items-center justify-between py-5 border-b-[1px] border-b-[#D8D8D8]">
+                        <div onClick={() => setshow(!show)} className="flex items-center justify-between py-5 border-b-[1px] border-b-[#F0F0F0]">
                             <h4 className="font-dm font-bold text-[16px] text-[#262626]">FEATURES  & DETAILS</h4>
                             {show == true ? <FaMinus /> :
                                 <FaPlus />}
@@ -116,7 +117,7 @@ const ProductDetails = () => {
                         }
                     </div>
                     <div className="">
-                        <div onClick={() => settshow(!showt)} className="flex items-center justify-between py-5 border-b-[1px] border-b-[#D8D8D8]">
+                        <div onClick={() => settshow(!showt)} className="flex items-center justify-between py-5 border-b-[1px] border-b-[#F0F0F0]">
                             <h4 className="font-dm font-bold text-[16px] text-[#262626]">SHIPPING & RETURNS</h4>
                             {showt == true ? <FaMinus /> :
                                 <FaPlus />}
@@ -127,9 +128,26 @@ const ProductDetails = () => {
                             </p>
                         }
                     </div>
+                </div>                
+                <div className="mb-[30px]">
+                        <h4 className="font-dm font-bold text-[20px] text-[#262626] mb-[30px]">Add a Review</h4>
+                    <div className="mb-[20px]">
+                        <h5 className="font-dm font-bold text-[16px] text-[#262626]">Name</h5>
+                        <input type="text" className="w-full outline-none py-[10px] border-b-[1px] border-[#F0F0F0]" placeholder="Your name here" />
+                    </div>
+                    <div className="mb-[20px]">
+                        <h5 className="font-dm font-bold text-[16px] text-[#262626]">Email</h5>
+                        <input type="email" className="w-full outline-none py-[10px] border-b-[1px] border-[#F0F0F0]" placeholder="Your email here" />
+                    </div>
+                    <div className="mb-[20px]">
+                        <h5 className="font-dm font-bold text-[16px] text-[#262626]">Review</h5>
+                        <div className="">
+                        <textarea name="Review" className="w-full outline-none py-[10px] border-b-[1px] border-[#F0F0F0]" id="" placeholder="Your review here"></textarea>
+                        </div>
+                    </div>
+                    <button className="font-dm font-bold text-[15px] border-[2px] border-[#262626] py-[15px] px-[80px] text-[#FFF] bg-[#262626] hover:shadow-xl ease-in-out duration-300">Post</button>
                 </div>
             </div>
-            <Description />
 
         </Container>
     )
