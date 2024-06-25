@@ -8,6 +8,7 @@ import { useRef } from "react";
 import color from "../assets/color.png"
 import { RxCross2 } from "react-icons/rx";
 import { RiArrowDropRightLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
     let [cateshow, setCateShow] = useState(false)
@@ -135,7 +136,7 @@ const Menu = () => {
                             {usershow &&
                                 <div className="bg-[#cecccc] text-center absolute top-7 right-[30px] border-[1px] w-[200px] z-50">
                                     <div className="border-b-[1px] py-4 hover:bg-[#2B2B2B] hover:text-[#FFF]">
-                                        <a href="#">My Account</a>
+                                        <a href="#"> <Link to="/myaccount">My Account</Link></a>
                                     </div>
                                     <div className="py-4 hover:bg-[#2B2B2B] hover:text-[#FFF]">
                                         <a href="#">Log Out</a>

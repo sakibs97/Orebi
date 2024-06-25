@@ -12,5 +12,6 @@ export default {
       'dm': ['DM Sans', 'sans-serif']
     }
   },
-  plugins: [],
+    plugins: [],
+  
 }

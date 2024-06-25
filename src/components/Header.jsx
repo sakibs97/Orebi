@@ -32,7 +32,8 @@ const Header = () => {
                     </div>
                     <div className="">
                         <a className="pr-4"><Link to='/login'>Login</Link></a>
-                        <a></a>
+                        <a className="pr-4"><Link to='/singup'>Sing Up</Link></a>
+                        
                     </div>
                     <div className="lg:hidden " onClick={handelshow}>
                         {show ? <RxCross2 /> : <FaBars />}
