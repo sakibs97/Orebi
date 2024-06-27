@@ -82,7 +82,7 @@ const Singup = () => {
               <form className="max-w-sm mx-auto">
                 <select id="countries" className="bg-[#fff] font-dm font-normal text-[#262626] text-[14px] rounded-lg block w-full py-[10px]">
                   <option className="font-dm font-normal text-[#262626] text-[14px]" selected>Please select</option>
-                  <option className="font-dm font-normal text-[#262626] text-[14px]" value="BD-A">Barisal</option>
+                  <option value="BD-A"><p className="font-dm font-normal text-[#262626] text-[14px]">Barisal</p></option>
                   <option className="font-dm font-normal text-[#262626] text-[14px]" value="BD-B">Chittagong</option>
                   <option className="font-dm font-normal text-[#262626] text-[14px]" value="BD-C">Dhaka</option>
                   <option className="font-dm font-normal text-[#262626] text-[14px]" value="BD-D">Khulna</option>
@@ -97,7 +97,7 @@ const Singup = () => {
               <h5 className="font-dm font-bold text-[14px] lg:text-[16px] text-[#262626]">District</h5>
               <form className="max-w-sm mx-auto text-[red]">
                 <select id="countries" className="bg-[#fff] text-gray-900 text-sm rounded-lg block w-full py-[10px]">
-                  <option selected className="font-dm font-normal text-[#262626] text-[14px]">Please select</option>
+                  <option className="font-dm font-normal text-[#262626] text-[14px]" selected>Please select</option>
                   <option className="font-dm font-normal text-[#262626] text-[14px]">Dhaka</option>
                   <option className="font-dm font-normal text-[#262626] text-[14px]">Faridpur</option>
                   <option className="font-dm font-normal text-[#262626] text-[14px]">Gazipur</option>
