@@ -69,15 +69,15 @@ const Singup = () => {
               <h5 className="font-dm font-bold text-[14px] lg:text-[16px] text-[#262626]">Address 2</h5>
               <input type="text" placeholder="_ _" className="py-[5px] outline-none w-full placeholder:font-dm placeholder:font-normal placeholder:text-[12px] placeholder:text-[#767676] font-dm font-normal text-[14px] lg:text-[16px] text-[#262626]" />
             </div>
-            <div className="border-b-[1px] border-[#F0F0F0] w-full lg:w-[45%] my-[5px] lg:my-[10px]">
+            <div className="border-b-[1px] border-[#F0F0F0] w-[45%] my-[5px] lg:my-[10px]">
               <h5 className="font-dm font-bold text-[14px] lg:text-[16px] text-[#262626]">City</h5>
               <input type="text" placeholder="Your city" className="py-[5px] outline-none w-full placeholder:font-dm placeholder:font-normal placeholder:text-[12px] placeholder:text-[#767676] font-dm font-normal text-[14px] lg:text-[16px] text-[#262626]" />
             </div>
-            <div className="border-b-[1px] border-[#F0F0F0] w-full lg:w-[45%] my-[5px] lg:my-[10px]">
+            <div className="border-b-[1px] border-[#F0F0F0] w-[45%] my-[5px] lg:my-[10px]">
               <h5 className="font-dm font-bold text-[14px] lg:text-[16px] text-[#262626]">Post Code</h5>
               <input type="number" placeholder="05228" className="py-[5px] outline-none w-full placeholder:font-dm placeholder:font-normal placeholder:text-[12px] placeholder:text-[#767676] font-dm font-normal text-[14px] lg:text-[16px] text-[#262626]" />
             </div>
-            <div className="border-b-[1px] border-[#F0F0F0] w-full lg:w-[45%] my-[5px] lg:my-[10px]">
+            <div className="border-b-[1px] border-[#F0F0F0] w-[45%] my-[5px] lg:my-[10px]">
               <h5 className="font-dm font-bold text-[14px] lg:text-[16px] text-[#262626]">Division</h5>
               <form className="max-w-sm mx-auto">
                 <select id="countries" className="bg-[#fff] font-dm font-normal text-[#262626] text-[14px] rounded-lg block w-full py-[10px]">
@@ -93,7 +93,7 @@ const Singup = () => {
                 </select>
               </form>
             </div>
-            <div className="border-b-[1px] border-[#F0F0F0] w-full lg:w-[45%] my-[5px] lg:my-[10px]">
+            <div className="border-b-[1px] border-[#F0F0F0] w-[45%] my-[5px] lg:my-[10px]">
               <h5 className="font-dm font-bold text-[14px] lg:text-[16px] text-[#262626]">District</h5>
               <form className="max-w-sm mx-auto text-[red]">
                 <select id="countries" className="bg-[#fff] text-gray-900 text-sm rounded-lg block w-full py-[10px]">
