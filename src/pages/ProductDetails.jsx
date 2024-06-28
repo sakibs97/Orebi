@@ -31,24 +31,24 @@ const ProductDetails = () => {
 
 
     return (
-        <Container>
-            <div className="my-[30px]">
-                <h3 className="font-dm font-bold text-[30px] lg:text-[40px] text-[#262626]">Products</h3>
-                <span className="font-dm font-normal text-[15px] text-[#767676]"><Link to="/" className="hover:text-[#262626]">
+        <Container className='px-[10px]'>
+            <div className="my-[10px] lg:my-[30px]">
+                <h3 className="font-dm font-bold text-[25px] lg:text-[40px] text-[#262626]">Products</h3>
+                <span className="font-dm font-normal text-[12px] lg:text-[15px] text-[#767676]"><Link to="/" className="hover:text-[#262626]">
                     Home</Link> &gt; <Link to="/products" className="hover:text-[#262626]">Products</Link> &gt; Details</span>
             </div>
             <div className="flex flex-wrap justify-between">
                 {singleProduct?.images?.map((item) => (
                     <>
-                        <div className="w-[49%] my-4">
-                            <img className="w-full h-[750px]" src={item} alt="" />
+                        <div className="lg:w-[49%] my-4">
+                            <img className="w-full lg:h-[750px]" src={item} alt="" />
                         </div>
                     </>
                 ))}
             </div>
-            <div className="w-[50%]">
+            <div className="lg:w-[50%]">
                 <div className="">
-                    <h3 className="font-dm font-bold text-[30px] lg:text-[40px] text-[#262626]">Product</h3>
+                    <h3 className="font-dm font-bold text-[25px] lg:text-[40px] text-[#262626]">Product</h3>
                     <div className="flex items-center pt-5">
                         <div className="flex items-center">
                             <FaStar />
@@ -66,7 +66,7 @@ const ProductDetails = () => {
                 </div>
                 <div className="border-b-[1px] border-b-[#F0F0F0] pb-5 mt-5">
                     <div className="flex items-center justify-between w-[280px]">
-                        <h4 className="font-dm font-bold text-[16px] text-[#262626] pr-6">COLOR:</h4>
+                        <h4 className="font-dm font-bold text-[14px] lg:text-[16px] text-[#262626] pr-6">COLOR:</h4>
                         <FaCircle className="mx-1 text-[#979797] w-[20px] h-[20px] hover:w-[28px] hover:h-[28px] ease-in-out duration-300" />
                         <FaCircle className=" text-[#FF8686] w-[20px] h-[20px] hover:w-[28px] hover:h-[28px] ease-in-out duration-300" />
                         <FaCircle className="mr-1 text-[#7ED321] w-[20px] h-[20px] hover:w-[28px] hover:h-[28px] ease-in-out duration-300" />
@@ -74,14 +74,14 @@ const ProductDetails = () => {
                         <FaCircle className="ml-1 text-[#15CBA5] w-[20px] h-[20px] hover:w-[28px] hover:h-[28px] ease-in-out duration-300" />
                     </div>
                     <div className="flex items-center justify-between w-[280px] my-5">
-                        <h4 className="font-dm font-bold text-[16px] text-[#262626]">SIZE :</h4>
+                        <h4 className="font-dm font-bold text-[14px] lg:text-[16px] text-[#262626]">SIZE :</h4>
                         <div className="flex items-center justify-around border-[2px] border-[#F0F0F0] w-[140px] h-[35px]">
                             <p>S</p>
                             <span><MdOutlineArrowDropDown /></span>
                         </div>
                     </div>
                     <div className="flex items-center justify-between w-[280px]">
-                        <h4 className="font-dm font-bold text-[16px] text-[#262626]">QUANTITY:</h4>
+                        <h4 className="font-dm font-bold text-[14px] lg:text-[16px] text-[#262626]">QUANTITY:</h4>
                         <div className="flex items-center justify-around border-[2px] border-[#F0F0F0] w-[140px] h-[35px]">
                             <FaPlus />
                             <p>1</p>
@@ -90,7 +90,7 @@ const ProductDetails = () => {
                     </div>
                 </div>
                 <div className="flex items-center border-b-[1px] border-b-[#F0F0F0] pb-5 mt-5">
-                    <h4 className="font-dm font-bold text-[16px] text-[#262626] mr-8">STATUS:</h4>
+                    <h4 className="font-dm font-bold text-[14px] lg:text-[16px] text-[#262626] mr-8">STATUS:</h4>
                     <p className="font-dm font-normal text-[16px] text-[#767676]">In stock</p>
                 </div>
                 <div className="py-5 border-b-[1px] border-b-[#F0F0F0]">
@@ -100,12 +100,12 @@ const ProductDetails = () => {
                 <div className="mb-5">
                     <div className="">
                         <div onClick={() => setshow(!show)} className="flex items-center justify-between py-5 border-b-[1px] border-b-[#F0F0F0]">
-                            <h4 className="font-dm font-bold text-[16px] text-[#262626]">FEATURES  & DETAILS</h4>
+                            <h4 className="font-dm font-bold text-[14px] lg:text-[16px] text-[#262626]">FEATURES  & DETAILS</h4>
                             {show == true ? <FaMinus /> :
                                 <FaPlus />}
                         </div>
                         {show &&
-                            <p className="font-dm font-normal text-[16px] text-[#767676] mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            <p className="font-dm font-normal text-[12px] lg:text-[15px] text-[#767676] mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Necessitatibus ducimus ipsum odit praesentium aspernatur,
                                 voluptatum exercitationem quaerat culpa a labore earum! Commodi temporibus incidunt
                                 illo deleniti maiores saepe repellat animi iure ex, ipsa quae, officia ad maxime?
@@ -118,12 +118,12 @@ const ProductDetails = () => {
                     </div>
                     <div className="">
                         <div onClick={() => settshow(!showt)} className="flex items-center justify-between py-5 border-b-[1px] border-b-[#F0F0F0]">
-                            <h4 className="font-dm font-bold text-[16px] text-[#262626]">SHIPPING & RETURNS</h4>
+                            <h4 className="font-dm font-bold text-[14px] lg:text-[16px] text-[#262626]">SHIPPING & RETURNS</h4>
                             {showt == true ? <FaMinus /> :
                                 <FaPlus />}
                         </div>
                         {showt &&
-                            <p className="font-dm font-normal text-[16px] text-[#767676] mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            <p className="font-dm font-normal text-[12px] lg:text-[15px] text-[#767676] mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Necessitatibus ducimus ipsum odit praesentium aspernatur,
                             </p>
                         }
@@ -131,21 +131,21 @@ const ProductDetails = () => {
                 </div>                
                 <div className="mb-[30px]">
                         <h4 className="font-dm font-bold text-[20px] text-[#262626] mb-[30px]">Add a Review</h4>
-                    <div className="mb-[20px]">
-                        <h5 className="font-dm font-bold text-[16px] text-[#262626]">Name</h5>
-                        <input type="text" className="w-full outline-none py-[10px] border-b-[1px] border-[#F0F0F0]" placeholder="Your name here" />
+                    <div className="mb-[10px] lg:mb-[20px]">
+                        <h5 className="font-dm font-bold text-[14px] lg:text-[16px] text-[#262626]">Name</h5>
+                        <input type="text" className="py-[5px] outline-none w-full placeholder:font-dm placeholder:font-normal placeholder:text-[12px] placeholder:text-[#767676] font-dm font-normal text-[14px] lg:text-[16px] text-[#262626]" placeholder="Your name here" />
                     </div>
-                    <div className="mb-[20px]">
-                        <h5 className="font-dm font-bold text-[16px] text-[#262626]">Email</h5>
-                        <input type="email" className="w-full outline-none py-[10px] border-b-[1px] border-[#F0F0F0]" placeholder="Your email here" />
+                    <div className="mb-[10px] lg:mb-[20px]">
+                        <h5 className="font-dm font-bold text-[14px] lg:text-[16px] text-[#262626]">Email</h5>
+                        <input type="email" className="py-[5px] outline-none w-full placeholder:font-dm placeholder:font-normal placeholder:text-[12px] placeholder:text-[#767676] font-dm font-normal text-[14px] lg:text-[16px] text-[#262626]" placeholder="Your email here" />
                     </div>
-                    <div className="mb-[20px]">
-                        <h5 className="font-dm font-bold text-[16px] text-[#262626]">Review</h5>
+                    <div className="mb-[10px] lg:mb-[20px]">
+                        <h5 className="font-dm font-bold text-[14px] lg:text-[16px] text-[#262626]">Review</h5>
                         <div className="">
-                        <textarea name="Review" className="w-full outline-none py-[10px] border-b-[1px] border-[#F0F0F0]" id="" placeholder="Your review here"></textarea>
+                        <textarea name="Review" className="py-[5px] outline-none w-full placeholder:font-dm placeholder:font-normal placeholder:text-[12px] placeholder:text-[#767676] font-dm font-normal text-[14px] lg:text-[16px] text-[#262626]" id="" placeholder="Your review here"></textarea>
                         </div>
                     </div>
-                    <button className="font-dm font-bold text-[15px] border-[2px] border-[#262626] py-[15px] px-[80px] text-[#FFF] bg-[#262626] hover:shadow-xl ease-in-out duration-300">Post</button>
+                    <button className="font-dm font-bold text-[15px] border-[2px] border-[#262626] py-[15px] px-[80px] text-[#FFF] bg-[#262626] hover:drop-shadow-xl ease-in-out duration-300">Post</button>
                 </div>
             </div>
 

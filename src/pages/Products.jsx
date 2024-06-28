@@ -47,18 +47,18 @@ const Products = () => {
 
     return (
         <>
-            <Container>
+            <Container className='px-[10px]'>
                 <div className="my-[30px]">
                     <h3 className="font-dm font-bold text-[30px] lg:text-[40px] text-[#262626]">Products</h3>
                     <span className="font-dm font-normal text-[15px] text-[#767676]"><Link to="/" className="hover:text-[#262626]">
                         Home</Link> &gt; Products</span>
                 </div>
                 <Flex className="justify-between">
-                    <div className="w-[19%] mb-[30px]">
+                    <div className="w-[25%] lg:w-[19%] mb-[30px]">
                         <div className="">
                             <h3 className="font-dm font-bold text-[15px] lg:text-[20px] text-[#262626] mb-[30px]">Shop by Category</h3>
                             <ul>
-                                <li className="flex items-center justify-between border-b-[2px] border-[#F0F0F0] py-[10px] font-dm font-normal text-[16px] text-[#767676]">Category 1<FiPlus /> </li>
+                                <li className="flex items-center justify-between border-b-[2px] border-[#F0F0F0] py-[10px] font-dm font-normal text-[14px] lg:text-[16px] text-[#767676]">Category 1<FiPlus /> </li>
                                 <li className="flex items-center justify-between border-b-[2px] border-[#F0F0F0] py-[10px] font-dm font-normal text-[16px] text-[#767676]">Category 2<FiPlus /> </li>
                                 <li className="flex items-center justify-between border-b-[2px] border-[#F0F0F0] py-[10px] font-dm font-normal text-[16px] text-[#767676]">Category 3<FiPlus /> </li>
                                 <li className="flex items-center justify-between border-b-[2px] border-[#F0F0F0] py-[10px] font-dm font-normal text-[16px] text-[#767676]">Category 4<FiPlus /> </li>
@@ -96,7 +96,7 @@ const Products = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="w-[79%]">
+                    <div className="w-[75%] lg:w-[79%]">
                         <div className="flex justify-between items-center">
                             <div className="flex items-center">
                                 <div className="p-[10px] border-[1px] border-[#F0F0F0] hover:bg-[#262626] hover:text-[#fff] mr-[20px]">

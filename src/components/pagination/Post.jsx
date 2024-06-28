@@ -10,7 +10,7 @@ const Post = ({ allPage }) => {
         <div className="flex flex-wrap justify-between">
             {allPage.map((item) => (
                 <>
-                    <div className="lg:w-[24%] w-[32%] mb-[10px] lg:mb-0">
+                    <div className="w-[48%] lg:w-[24%] mb-[10px] lg:mb-0">
                         <Link to={`/products/${item.id}`}>
                             <div className="relative overflow-hidden group">
                                 <img src={item.thumbnail} alt="best1" className="w-full lg:h-[250px] h-[150px] hover:shadow-lg shadow-[#D8D8D8]-500/50" />
